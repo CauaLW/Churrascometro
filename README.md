@@ -1,3 +1,5 @@
+<h1 align="center">Churrascômetro</h1>
+
 <p align="center">	
   <a href="https://www.linkedin.com/in/cau%C3%A3-loewen-werling-a564801b7/">
     <img alt="Cauã L. Werling" src="https://img.shields.io/badge/-Cau%C3%A3L.Werling-FFE162?style=flat&logo=Linkedin&logoColor=black" />
