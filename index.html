@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrascômetro</title>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="shortcut icon" href="./images/icone.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <img src="./images/churrasco.jpg" alt="Imagem ilustrativa com itens de churrasco" class="img">
+
+        <div class="content">
+            <h1>Churrascômetro</h1>
+
+            <form class="formulario">
+                <input type="number" id="adultos" placeholder="Digite o número de adultos">
+                <input type="number" id="criancas" placeholder="Digite o número de crianças">
+                <input type="number" id="duracao" placeholder="Digite a duração do churrasco">
+            </form>
+
+            <button id="btn-calcular">Calcular</button>
+
+            <div class="resultado" id="resultado-carne">
+            <img class="img-resultado" src="./images/icone-bife.png" alt="Emoji de bife">
+
+            </div>
+            <div class="resultado" id="resultado-cerveja">
+            <img class="img-resultado" src="./images/icone-cerveja.png" alt="Emoji de cerveja">
+
+            </div>
+            <div class="resultado" id="resultado-bebidas">
+            <img class="img-resultado" src="./images/icone-agua.png" alt="Emoji de água">
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
