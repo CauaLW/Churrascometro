@@ -9,13 +9,25 @@ function calcular () {
     const inputCriancas = document.querySelector('#criancas')
     const inputDuracao = document.querySelector('#duracao')
 
-    const adultos = parseInt(document.querySelector('#adultos').value)
-    const criancas = parseInt(document.querySelector('#criancas').value)
-    const duracao = parseInt(document.querySelector('#duracao').value)
+    let adultos = parseInt(inputAdultos.value)
+    let criancas = parseInt(inputCriancas.value)
+    let duracao = parseInt(inputDuracao.value)
 
     let qtdCarne = 0
     let qtdCerveja = 0
     let qtdBebidas = 0
+
+    if (!adultos > 0) {
+        adultos = 0
+    }
+
+    if (!criancas > 0) {
+        criancas = 0
+    }
+
+    if (!duracao > 0) {
+        duracao = 0
+    }
 
     if(duracao >= 6) {
         qtdCarne = adultos * 650 + criancas * 325
@@ -27,6 +39,26 @@ function calcular () {
         qtdCerveja = adultos * 1200
         qtdBebidas = adultos * 1000 + criancas * 500
     }
+
+    document.querySelectorAll('.img-resultado').forEach(img => {
+        img.style.display = 'inline'
+    })
+
+    const resultado = document.querySelectorAll('.resultado')
+    
+    document.querySelectorAll('span').forEach(span => span.remove())
+
+    const spanCarne = document.createElement('span')
+    spanCarne.innerHTML = `${Math.ceil(qtdCarne / 1000)} Kg de carne.`
+    resultado[0].appendChild(spanCarne)
+
+    const spanCerveja = document.createElement('span')
+    spanCerveja.innerHTML = `${Math.ceil(qtdCerveja / 355)} latas de cerveja`
+    resultado[1].appendChild(spanCerveja)
+
+    const spanBebida = document.createElement('span')
+    spanBebida.innerHTML = `${Math.ceil(qtdBebidas / 2000)} garrafas de bebidas`
+    resultado[2].appendChild(spanBebida)
 }
 
 document.querySelector('#btn-calcular').addEventListener('click', calcular)
